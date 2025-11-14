@@ -3,8 +3,8 @@ const cors = require('cors')
 const authorization = require('./middleware/authorization')
 const userRouter = require('./routes/user')
 const testRouter = require('./routes/test')
-const movies=require('../Backend/routes/movies')
-const review=require('../Backend/routes/review')
+const movies = require('../Backend/routes/movies')
+const review = require('../Backend/routes/review')
 
 
 
@@ -18,8 +18,8 @@ app.use(authorization)
 
 app.use('/test', testRouter)
 app.use('/user', userRouter)
-app.use('/movies',movies)
-app.use('/review',review) 
+app.use('/movies', movies)
+app.use('/review', review)
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`)
